@@ -23,13 +23,6 @@ Example
 -------  
 
 ``` javascript
-Template.post.created = function() {
-  var tpl = this;
-  tpl.state("loading", false);
-}
-```  
-
-``` javascript
 Template.post.events({
   "submit form": function(e, tpl) {
     var data = { ... }; // get your data
