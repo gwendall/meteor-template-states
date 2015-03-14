@@ -25,9 +25,8 @@ Example
 ``` javascript
 Template.post.events({
   "submit form": function(e, tpl) {
-    var data = { ... }; // get your data
     tpl.state("loading", true);
-    Meteor.call("post.create", data, function(err, res) {
+    Meteor.call("post.create", { ... }, function(err, res) {
       tpl.state("loading", false);
       // Do something else
     });
