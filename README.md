@@ -26,7 +26,7 @@ Declare your states in ```onCreated``` hooks
 
 ``` javascript
 Template.post.onCreated(function() {
-  this.loading.state('loading', false);
+  this.state('loading', false);
 })
 ```  
 
