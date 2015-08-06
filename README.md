@@ -30,7 +30,7 @@ Template.post.onCreated(function() {
 })
 ```  
 
-The state is then available in templates.  
+The states are then available in your templates.  
 
 ``` javascript
 Template.post.events({
