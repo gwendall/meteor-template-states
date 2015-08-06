@@ -22,19 +22,27 @@ Sets a template state
 Example
 -------  
 
+Declare your states in ```onCreated``` hooks
+
+``` javascript
+Template.post.onCreated(function() {
+  this.loading.state('loading', false);
+})
+```  
+
+The state is then available in templates.  
+
 ``` javascript
 Template.post.events({
-  "submit form": function(e, tpl) {
-    tpl.state("loading", true);
-    Meteor.call("post.create", { ... }, function(err, res) {
-      tpl.state("loading", false);
+  'submit form': function(e, tpl) {
+    tpl.state('loading', true);
+    Meteor.call('post.create', { ... }, function(err, res) {
+      tpl.state('loading', false);
       // Do something else
     });
   }
 })
 ```  
-
-The state is then available in templates  
 
 ``` html
   <template name="post">
